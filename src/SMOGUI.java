@@ -18,6 +18,24 @@ public class SMOGUI {
              );
             }
         });
+        button2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                answerText2.setText
+                        (
+                        (new Double(
+                                (new Chain())
+                                        .createMultipleHandlerSMO(
+                                                (Integer)spinner1.getValue()
+                                                ,Double.parseDouble(lambdaText2.getText())
+                                                ,Double.parseDouble(muText2.getText())
+                                                                )
+                                        .coutMv()
+                                    ).toString()
+                        )
+                        );
+            }
+        });
     }
 
     public static void main(String[] args) {
@@ -33,4 +51,12 @@ public class SMOGUI {
     private JTextField textField1;
     private JTextField textField2;
     private JTextField textField3;
+    private JTabbedPane tabbedPane1;
+    private JSpinner spinner1;
+    private JButton button2;
+    private JTextField answerText2;
+    private JTextField lambdaText2;
+    private JTextField muText2;
+
+
 }
