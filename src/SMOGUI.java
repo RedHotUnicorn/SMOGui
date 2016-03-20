@@ -1,6 +1,9 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseMotionAdapter;
 
 /**
  * Created by aleksandr on 18.03.16.
@@ -36,6 +39,7 @@ public class SMOGUI {
                         );
             }
         });
+
     }
 
     public static void main(String[] args) {
@@ -45,7 +49,9 @@ public class SMOGUI {
         frame.pack();
         frame.setVisible(true);
     }
-
+    public void paint(Graphics g){
+ g.drawLine(20, 20, 360, 20);
+    };
     private JPanel MainJPanel;
     private JButton button1;
     private JTextField textField1;
@@ -59,4 +65,7 @@ public class SMOGUI {
     private JTextField muText2;
 
 
+    private void createUIComponents() {
+        // TODO: place custom component creation code here
+    }
 }
