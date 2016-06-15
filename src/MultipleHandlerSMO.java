@@ -5,8 +5,8 @@
 public class MultipleHandlerSMO extends SMO {
     protected int channelCount;
 
-    MultipleHandlerSMO(double l, double channelCount, int n) {
-        super(l, channelCount, 2);
+    MultipleHandlerSMO(double l, double m, int n) {
+        super(l, m, 2);
         this.channelCount = n;
     }
 
