@@ -30,13 +30,14 @@ public class OneHandlerSMOImpl extends MultipleHandlerSMO {
     double getMv() { // общее время обработки
         double mw = getQueueLength() / (lamda * (1 - getPfail()));
         double mx = 1 / mu;
+//        System.out.println("!!!! mx = " + mx*60 + " mw = " + mw*60);
         return mw + mx;
     }
 
     double getQueueLength() {
         double sum = 0;
 
-        for (int i = 1; i < k; i++) {
+        for (int i = 1; i <= k; i++) {
 
             sum += getPfail(i) * i;
 
@@ -54,10 +55,15 @@ public class OneHandlerSMOImpl extends MultipleHandlerSMO {
     }
 
     public static void main(String[] args) {
-        for (int i = 0; i < 50; i++) {
-            OneHandlerSMOImpl smo = new OneHandlerSMOImpl(4, 4, i);
-            System.out.println(i + "\nMv = " + smo.getMv() + "\nQueueLength = " + smo.getQueueLength() + "\nP0 = " + smo.getP0() + "\nP fail = " + smo.getPfail());
+        for (int i = 0; i <= 50; i++) {
+            OneHandlerSMOImpl smo = new OneHandlerSMOImpl(250, 4*60, i);
+            System.out.println(i);
+            System.out.println("Mv = " + smo.getMv());
+            System.out.println("QueueLength = " + smo.getQueueLength());
+            System.out.println("P0 = " + smo.getP0());
+            System.out.println("P fail = " + smo.getPfail());
             System.out.println();
         }
     }
 }
+//
