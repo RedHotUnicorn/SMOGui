@@ -1,8 +1,6 @@
 /**
  * Created by Александр on 13.03.2016.
  */
-import java.lang.Math;
-
 public abstract class SMO {
     protected double lamda;
     protected double mu;
@@ -16,8 +14,8 @@ public abstract class SMO {
         ro=l/m;
     }
 
-    abstract double coutP0();
-    abstract double coutMv();
+    abstract double getP0();
+    abstract double getMv();
     public int fact(int num) {
         return (num == 0) ? 1 : num * fact(num - 1);
     }

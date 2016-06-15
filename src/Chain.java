@@ -5,27 +5,27 @@ public class Chain {
     public static void main(String[] args) {
         SMO m1 = new MultipleHandlerSMO(1.0,2.0,2);
        // SMO m2 = new OneHandlerSMO(0.8*1.0/3.0,1.0/2.5);
-        System.out.println(m1.coutP0());
+        System.out.println(m1.getP0());
 
-       /* System.out.println(m1.coutMv()+m2.coutMv());
+       /* System.out.println(m1.getMv()+m2.getMv());
 
         SMO m3 = new MultipleHandlerSMO(0.8*1.0/3.0,1.0/5.0,2);
         SMO m4 = new OneHandlerSMO(0.8*1.0/3.0,1.0/2.5);
 
-        System.out.println(m3.coutMv()+m4.coutMv());
+        System.out.println(m3.getMv()+m4.getMv());
 
         SMO m5 = new MultipleHandlerSMO(1.0/3.0,1.0/5.0,3);
         SMO m6 = new OneHandlerSMO(0.8*1.0/3.0,1.0/2.5);
 
-        System.out.println(m5.coutMv()+m6.coutMv());*/
+        System.out.println(m5.getMv()+m6.getMv());*/
 
     }
-    public static SMO createOneHandlerSMO( double lambda,double mu){
+    public static SMO createOneHandlerSMO(double lambda, double mu){
         SMO smo = new OneHandlerSMO(lambda,mu);
         return smo;
     }
 
-    public static SMO createMultipleHandlerSMO(int n, double lambda,double mu){
+    public static SMO createMultipleHandlerSMO(int n, double lambda, double mu){
         SMO smo = new MultipleHandlerSMO(lambda,mu,n);
         return smo;
     }

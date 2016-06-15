@@ -2,8 +2,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseMotionAdapter;
 
 /**
  * Created by aleksandr on 18.03.16.
@@ -17,7 +15,7 @@ public class SMOGUI {
                      (new Double(
                              (new Chain())
                                      .createOneHandlerSMO(Double.parseDouble(textField2.getText()),Double.parseDouble(textField3.getText()))
-                                     .coutMv())).toString()
+                                     .getMv())).toString()
              );
             }
         });
@@ -33,7 +31,7 @@ public class SMOGUI {
                                                 ,Double.parseDouble(lambdaText2.getText())
                                                 ,Double.parseDouble(muText2.getText())
                                                                 )
-                                        .coutMv()
+                                        .getMv()
                                     ).toString()
                         )
                         );
