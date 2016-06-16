@@ -9,7 +9,7 @@ import java.awt.event.ActionListener;
 public class SMOGUI {
     public SMOGUI() {
         button1.addActionListener(new ActionListener() {
-            @Override
+
             public void actionPerformed(ActionEvent e) {
              textField1.setText (
                      (new Double(
@@ -20,7 +20,7 @@ public class SMOGUI {
             }
         });
         button2.addActionListener(new ActionListener() {
-            @Override
+
             public void actionPerformed(ActionEvent e) {
                 answerText2.setText
                         (
