@@ -8,35 +8,36 @@ import java.awt.event.ActionListener;
  */
 public class SMOGUI {
     public SMOGUI() {
-        button1.addActionListener(new ActionListener() {
+//        button1.addActionListener(
+//                new ActionListener() {
 
-            public void actionPerformed(ActionEvent e) {
-             textField1.setText (
-                     (new Double(
-                             (new QueueOfSMOs())
-                                     .createOneHandlerSMO(Double.parseDouble(textField2.getText()),Double.parseDouble(textField3.getText()))
-                                     .getMv())).toString()
-             );
-            }
-        });
-        button2.addActionListener(new ActionListener() {
-
-            public void actionPerformed(ActionEvent e) {
-                answerText2.setText
-                        (
-                        (new Double(
-                                (new QueueOfSMOs())
-                                        .createMultipleHandlerSMO(
-                                                (Integer)spinner1.getValue()
-                                                ,Double.parseDouble(lambdaText2.getText())
-                                                ,Double.parseDouble(muText2.getText())
-                                                                )
-                                        .getMv()
-                                    ).toString()
-                        )
-                        );
-            }
-        });
+//            public void actionPerformed(ActionEvent e) {
+//             textField1.setText (
+//                     (new Double(
+//                             (new QueueOfSMOs())
+//                                     .addOneHandlerSMO(Double.parseDouble(textField2.getText()),Double.parseDouble(textField3.getText()))
+//                                     .getMv())).toString()
+//             );
+//            }
+//        });
+//        button2.addActionListener(new ActionListener() {
+//
+//            public void actionPerformed(ActionEvent e) {
+//                answerText2.setText
+//                        (
+//                        (new Double(
+//                                (new QueueOfSMOs())
+//                                        .addMultipleHandlerSMO(
+//                                                (Integer)spinner1.getValue()
+//                                                ,Double.parseDouble(lambdaText2.getText())
+//                                                ,Double.parseDouble(muText2.getText())
+//                                                                )
+//                                        .getMv()
+//                                    ).toString()
+//                        )
+//                        );
+//            }
+//        });
 
     }
 
