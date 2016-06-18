@@ -10,6 +10,7 @@ public class LimitedQueueMultipleHandlerSMO extends MultipleHandlerSMO {
         this.queueLimit = queueLimit;
         type=3;
         this.setQueueLength();
+        this.calc();
     }
 
     @Override

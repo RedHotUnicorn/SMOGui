@@ -31,11 +31,11 @@ public class QueueOfSMOs {
     }
 
     public static void main(String[] args) {
-        SMO m1 = new MultipleHandlerSMO(1.0,2.0,2);
+        SMO m1 = new MultipleHandlerSMO(2.0,1.1,2);
         SMO m2 = new OneHandlerSMO(0.8*1.0/3.0,1.0/2.5);
         System.out.println(m1.getP0());
 
-        System.out.println(m1.getMv()+m2.getMv());
+        System.out.println(m1.getMv()+" "+m2.getMv());
 
         SMO m3 = new MultipleHandlerSMO(0.8*1.0/3.0,1.0/5.0,2);
         SMO m4 = new OneHandlerSMO(0.8*1.0/3.0,1.0/2.5);

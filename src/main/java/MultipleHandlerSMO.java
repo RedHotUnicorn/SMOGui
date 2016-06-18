@@ -9,8 +9,10 @@ public class MultipleHandlerSMO extends SMO {
     protected double sumOfRoDivideToIFact;
     MultipleHandlerSMO(double lambda, double mu, int chanelCount) {
         super(lambda, mu);
-        this.type = 2;
         this.channelCount = chanelCount;
+        this.type = 2;
+        this.calc();
+
     }
 
     public void setSumOfRoDivideToIFact() {

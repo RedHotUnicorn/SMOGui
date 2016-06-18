@@ -5,6 +5,7 @@ public class OneHandlerSMO extends SMO {
 
     OneHandlerSMO(double lambda, double m){
         super(lambda,m);type=1;
+        this.calc();
     }
 
     void setP0() {
