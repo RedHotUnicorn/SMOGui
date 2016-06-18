@@ -4,7 +4,7 @@
 public class OneHandlerSMO extends SMO {
 
     OneHandlerSMO(double lambda, double m){
-        super(lambda,m,1);
+        super(lambda,m);type=1;
     }
 
     void setP0() {

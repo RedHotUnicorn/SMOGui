@@ -13,7 +13,7 @@ public class SMOGUI {
             public void actionPerformed(ActionEvent e) {
              textField1.setText (
                      (new Double(
-                             (new Chain())
+                             (new QueueOfSMOs())
                                      .createOneHandlerSMO(Double.parseDouble(textField2.getText()),Double.parseDouble(textField3.getText()))
                                      .getMv())).toString()
              );
@@ -25,7 +25,7 @@ public class SMOGUI {
                 answerText2.setText
                         (
                         (new Double(
-                                (new Chain())
+                                (new QueueOfSMOs())
                                         .createMultipleHandlerSMO(
                                                 (Integer)spinner1.getValue()
                                                 ,Double.parseDouble(lambdaText2.getText())

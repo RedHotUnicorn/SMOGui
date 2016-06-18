@@ -11,10 +11,9 @@ public abstract class SMO {
     protected double p0;   //Вероятность начального состояния
     protected int type;     //Тип обработчика : Одноканальный, многоканальный, с буфером
 
-    SMO(double lamda, double m,int t){
+    SMO(double lamda, double m){
         this.lamda = lamda;
         this.mu=m;
-        this.type = t;
         this.ro=this.lamda/m;
         this.setP0();
         this.setMv();

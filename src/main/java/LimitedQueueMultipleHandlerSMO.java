@@ -5,9 +5,10 @@ public class LimitedQueueMultipleHandlerSMO extends MultipleHandlerSMO {
     int queueLimit; //рамер буффера (очереди)
     double queueLength;
 
-    public LimitedQueueMultipleHandlerSMO(double lambda, int mu, int queueLimit) {
-        super(lambda, mu, 3);
+    public LimitedQueueMultipleHandlerSMO(double lambda, double mu,int chanelCount, int queueLimit) {
+        super(lambda, mu, chanelCount);
         this.queueLimit = queueLimit;
+        type=3;
         this.setQueueLength();
     }
 
@@ -37,20 +38,9 @@ public class LimitedQueueMultipleHandlerSMO extends MultipleHandlerSMO {
     }
 
     double getProbOfReject() {
-        //return Math.pow(ro, channelCount + queueLimit) / (fact(channelCount) * Math.pow(channelCount, queueLimit)) * getP0();
         return getProb(channelCount + queueLimit);
     }
 
-    public static void main(String[] args) {
-        for (int i = 0; i <= 50; i++) {
-            LimitedQueueMultipleHandlerSMO smo = new LimitedQueueMultipleHandlerSMO(250, 4 * 60, i);
-            System.out.println(i);
-            System.out.println("Mv = " + smo.getMv());
-            System.out.println("QueueLength = " + smo.queueLength);
-            System.out.println("P0 = " + smo.getP0());
-            System.out.println("P fail = " + smo.getProbOfReject());
-            System.out.println();
-        }
-    }
+
 }
 //
