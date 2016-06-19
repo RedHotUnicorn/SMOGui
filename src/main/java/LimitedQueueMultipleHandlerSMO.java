@@ -8,7 +8,7 @@ public class LimitedQueueMultipleHandlerSMO extends MultipleHandlerSMO {
     public LimitedQueueMultipleHandlerSMO(double lambda, double mu,int chanelCount, int queueLimit) {
         super(lambda, mu, chanelCount);
         this.queueLimit = queueLimit;
-        type=3;
+        this.type=typesOfSMO.LimitedQueueMultipleHandler;
         this.setQueueLength();
         this.calc();
     }

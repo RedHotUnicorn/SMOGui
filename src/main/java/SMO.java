@@ -9,7 +9,9 @@ public abstract class SMO {
     protected double mx;    //Время обработки
     protected double mw;    //Время в очереди
     protected double p0;   //Вероятность начального состояния
-    protected int type;     //Тип обработчика : Одноканальный, многоканальный, с буфером
+
+    enum typesOfSMO {OneHandler,MultipleHandler,LimitedQueueMultipleHandler} //Тип обработчика : Одноканальный, многоканальный, с буфером
+    protected typesOfSMO type;
 
     SMO(double lamda, double mu){
         this.lamda = lamda;

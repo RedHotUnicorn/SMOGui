@@ -10,7 +10,7 @@ public class MultipleHandlerSMO extends SMO {
     MultipleHandlerSMO(double lambda, double mu, int chanelCount) {
         super(lambda, mu);
         this.channelCount = chanelCount;
-        this.type = 2;
+        this.type = typesOfSMO.MultipleHandler;
         this.calc();
 
     }
