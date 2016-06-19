@@ -39,6 +39,12 @@ public class SMOGUI {
 //            }
 //        });
 
+        button2.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+
+                JOptionPane.showMessageDialog(MainJPanel, "This is the message", "This is the default text",JOptionPane.ERROR_MESSAGE);
+            }
+        });
     }
 
     public static void main(String[] args) {
@@ -48,9 +54,7 @@ public class SMOGUI {
         frame.pack();
         frame.setVisible(true);
     }
-    public void paint(Graphics g){
- g.drawLine(20, 20, 360, 20);
-    };
+
     private JPanel MainJPanel;
     private JButton button1;
     private JTextField textField1;
