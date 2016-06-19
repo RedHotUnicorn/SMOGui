@@ -66,6 +66,8 @@ public class SMOGUI {
     private JTextField answerText2;
     private JTextField lambdaText2;
     private JTextField muText2;
+    private JTabbedPane tabbedPane2;
+    private JScrollPane Последовательность;
 
 
     private void createUIComponents() {
