@@ -25,6 +25,8 @@ public class SMOGUI {
                 super.mouseClicked(e);
                 if (e.getClickCount() == 2) {
                     System.out.println("double clicked");
+
+                    if(JOptionPane.showConfirmDialog(MainJPanel, "This is the message", "This is the default text",JOptionPane.OK_OPTION)==0)
                     listModel.removeElementAt(list1.getSelectedIndex());
                 }
                 //System.out.println(list1.getSelectedIndex());
