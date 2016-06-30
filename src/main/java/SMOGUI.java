@@ -1,3 +1,5 @@
+import com.sun.xml.internal.bind.v2.TODO;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -15,8 +17,12 @@ public class SMOGUI {
         });
         button1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                list1.setModel(listModel);
-                listModel.addElement(textField2.getText()+" "+textField3.getText());
+                if(textField2.getText().isEmpty()||textField3.getText().isEmpty())
+                    JOptionPane.showMessageDialog(MainJPanel, "Одно из значений пустое", "Ошибка",JOptionPane.ERROR_MESSAGE);
+                else {
+                    list1.setModel(listModel);
+                    listModel.addElement(textField2.getText() + " " + textField3.getText());
+                }
             }
         });
         list1.addMouseListener(new MouseAdapter() {
@@ -24,15 +30,15 @@ public class SMOGUI {
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
                 if (e.getClickCount() == 2) {
-                    System.out.println("double clicked");
 
-                    if(JOptionPane.showConfirmDialog(MainJPanel, "This is the message", "This is the default text",JOptionPane.OK_OPTION)==0)
+                    if(JOptionPane.showConfirmDialog(MainJPanel, "Вы хотите удалить СМО?" , "Удаление СМО из последовательности",JOptionPane.OK_OPTION)==0)
                     listModel.removeElementAt(list1.getSelectedIndex());
                 }
                 //System.out.println(list1.getSelectedIndex());
 
             }
         });
+
     }
 
     public static void main(String[] args) {
