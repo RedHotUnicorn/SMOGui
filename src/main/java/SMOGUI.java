@@ -19,6 +19,18 @@ public class SMOGUI {
                 listModel.addElement(textField2.getText()+" "+textField3.getText());
             }
         });
+        list1.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                if (e.getClickCount() == 2) {
+                    System.out.println("double clicked");
+                    listModel.removeElementAt(list1.getSelectedIndex());
+                }
+                //System.out.println(list1.getSelectedIndex());
+
+            }
+        });
     }
 
     public static void main(String[] args) {
