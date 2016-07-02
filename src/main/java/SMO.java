@@ -13,13 +13,21 @@ public abstract class SMO {
     enum typesOfSMO {OneHandler,MultipleHandler,LimitedQueueMultipleHandler} //Тип обработчика : Одноканальный, многоканальный, с буфером
     protected typesOfSMO type;
 
+    /**
+     *
+     * @param lamda Интенсивность входного потока
+     *
+     * @param mu Интенсивность обработчика
+     */
+
     SMO(double lamda, double mu){
         this.lamda = lamda;
         this.mu=mu;
         this.ro=this.lamda/mu;
 
     }
-    void calc(){
+
+    void calculateCharacteristicOfSMO(){
         this.setP0();
         this.setMv();
     }
@@ -34,7 +42,13 @@ public abstract class SMO {
     }
     abstract void setMv();
 
-    abstract double getProb(int pNumber);
+
+    /**
+     * @param stateNumber Номер состояния в схеме гибели и размножения
+     *
+     * @return Вкроятность нахождения системы в этом состоянии
+     */
+    abstract double getProbablyOfState(int stateNumber);
 
     public int fact(int num) {
         return (num == 0) ? 1 : num * fact(num - 1);

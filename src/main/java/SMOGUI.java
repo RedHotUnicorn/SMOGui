@@ -15,6 +15,7 @@ public class SMOGUI {
                 JOptionPane.showMessageDialog(MainJPanel, "This is the message", "This is the default text",JOptionPane.ERROR_MESSAGE);
             }
         });
+
         button1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 if(textField2.getText().isEmpty()||textField3.getText().isEmpty())

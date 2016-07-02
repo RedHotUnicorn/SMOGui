@@ -3,9 +3,13 @@
  */
 public class OneHandlerSMO extends SMO {
 
+    /**
+     * Инициализирует поля {@link SMO#lamda} и {@link SMO#mu}
+     */
     OneHandlerSMO(double lambda, double m){
-        super(lambda,m);type=typesOfSMO.OneHandler;
-        this.calc();
+        super(lambda,m);
+        type=typesOfSMO.OneHandler;
+        this.calculateCharacteristicOfSMO();
     }
 
     void setP0() {
@@ -16,8 +20,8 @@ public class OneHandlerSMO extends SMO {
         mv=1/(mu-lamda);
     }
 
-    double getProb(int pNumber) {
-        return Math.pow(ro,pNumber)*p0;
+    double getProbablyOfState(int stateNumber) {
+        return Math.pow(ro, stateNumber)*p0;
     }
 
 }

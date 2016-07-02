@@ -25,9 +25,8 @@
         <module name="SMOGui" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="1.7">
-      <module name="SMO" target="1.5" />
-      <module name="SMOGui" target="1.5" />
+    <bytecodeTargetLevel target="1.8">
+      <module name="SMOGui" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
