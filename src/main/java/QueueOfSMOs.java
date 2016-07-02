@@ -11,17 +11,17 @@ public class QueueOfSMOs {
 
     ArrayList<SMO> queue = new ArrayList<SMO>();
 
-    public void addOneHandlerSMO(double lambda, double mu) {
+    public void addOneHandlerSMO(double lambda, double mu) throws Exception {
         SMO smo = new OneHandlerSMO(lambda, mu);
         queue.add(smo);
     }
 
-    public void addMultipleHandlerSMO(int chanelCount, double lambda, double mu) {
+    public void addMultipleHandlerSMO(int chanelCount, double lambda, double mu) throws Exception {
         SMO smo = new MultipleHandlerSMO(lambda, mu, chanelCount);
         queue.add(smo);
     }
 
-    public void addLimitedQueueMultipleHandlerSMO(int chanelCount, double lambda, double mu, int queueLimit) {
+    public void addLimitedQueueMultipleHandlerSMO(int chanelCount, double lambda, double mu, int queueLimit) throws Exception {
         SMO smo = new LimitedQueueMultipleHandlerSMO(lambda, mu, chanelCount, queueLimit);
         queue.add(smo);
     }
@@ -46,7 +46,7 @@ public class QueueOfSMOs {
         return queue.get(index).getMv();
     }
 
-    public static void main(String[] args) throws ParseException {
+    public static void main(String[] args) throws Exception {
         /*SMO m1 = new MultipleHandlerSMO(2.0,1.1,2);
         SMO m2 = new OneHandlerSMO(0.8*1.0/3.0,1.0/2.5);
         System.out.println(m1.getP0());
@@ -63,7 +63,7 @@ public class QueueOfSMOs {
 
         System.out.println(m5.getMv()+m6.getMv());*/
         QueueOfSMOs q = new QueueOfSMOs();
-        q.addOneHandlerSMO(0.8*1.0/3.0,1.0/2.5);
+        q.addOneHandlerSMO(10.8*1.0/3.0,1.0/2.5);
         q.addMultipleHandlerSMO(2,2.0,1.1);
         q.addMultipleHandlerSMO(2,0.8*1.0/3.0,1.0/5.0);
         q.addOneHandlerSMO(0.8*1.0/3.0,1.0/2.5);

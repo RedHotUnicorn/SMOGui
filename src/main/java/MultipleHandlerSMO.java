@@ -8,8 +8,8 @@ public class MultipleHandlerSMO extends SMO {
     protected double sumOfRoDivideToIFact;
 
 
-    MultipleHandlerSMO(double lambda, double mu, int chanelCount) {
-        super(lambda, mu);
+    MultipleHandlerSMO(double lambda, double mu, int chanelCount) throws Exception {
+        super(lambda, mu,chanelCount);
         this.channelCount = chanelCount;
         this.type = typesOfSMO.MultipleHandler;
         this.calculateCharacteristicOfSMO();

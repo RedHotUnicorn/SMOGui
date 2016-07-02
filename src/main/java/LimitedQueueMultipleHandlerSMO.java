@@ -5,7 +5,7 @@ public class LimitedQueueMultipleHandlerSMO extends MultipleHandlerSMO {
     int queueLimit;             //рамер буффера (очереди)
     double averageQueueLength;  //средняя длина очереди
 
-    public LimitedQueueMultipleHandlerSMO(double lambda, double mu,int chanelCount, int queueLimit) {
+    public LimitedQueueMultipleHandlerSMO(double lambda, double mu,int chanelCount, int queueLimit) throws Exception {
         super(lambda, mu, chanelCount);
         this.queueLimit = queueLimit;
         this.type=typesOfSMO.LimitedQueueMultipleHandler;

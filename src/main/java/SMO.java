@@ -1,3 +1,7 @@
+import com.sun.javaws.exceptions.InvalidArgumentException;
+
+import java.security.InvalidParameterException;
+
 /**
  * Created by Александр on 13.03.2016.
  */
@@ -20,10 +24,14 @@ public abstract class SMO {
      * @param mu Интенсивность обработчика
      */
 
-    SMO(double lamda, double mu){
+    SMO(double lamda, double mu, int numOfProccess) throws Exception{
         this.lamda = lamda;
         this.mu=mu;
-        this.ro=this.lamda/mu;
+        this.ro=this.lamda/(mu*numOfProccess);
+
+            if (ro > 1) throw new Exception() ;
+
+
 
     }
 
